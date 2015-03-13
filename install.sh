@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+#if [ -d "$DIRECTORY" ]; then
+#    echo "test"
+#      # Control will enter here if $DIRECTORY exists.
+#fi
+
 function link_file {
     source="${PWD}/$1"
     target="${HOME}/${1/_/.}"
@@ -25,16 +30,16 @@ function unlink_file {
     fi
 }
 
-if [ "$1" == "undeploy" ]; then
-    for i in _*
-    do
-        unlink_file $i
-    done
-fi
-
 if [ "$1" == "deploy" ]; then
     for i in _*
     do
         link_file $i
+    done
+fi
+
+if [ "$1" == "undeploy" ]; then
+    for i in _*
+    do
+        unlink_file $i
     done
 fi
