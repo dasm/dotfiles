@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-#if [ -d "$DIRECTORY" ]; then
-#    echo "test"
-#      # Control will enter here if $DIRECTORY exists.
-#fi
-
 function link_file {
     source="${PWD}/$1"
     target="${HOME}/${1/_/.}"

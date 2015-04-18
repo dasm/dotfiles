@@ -1,5 +1,7 @@
 [user]
-	name = Dariusz Smigiel (dasm)
-	email = dariusz.smigiel@intel.com
+    name = Dariusz Smigiel (dasm)
+    email = dariusz.smigiel@intel.com
 [gitreview]
-	username = dasm
+    username = dasm
+[color]
+    ui = true
