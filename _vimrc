@@ -40,7 +40,6 @@ set spell
 colorscheme desert
 
 " Whitespaces
-set list
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 " Remove whitespaces
 autocmd BufWritePre * :%s/\s\+$//e
