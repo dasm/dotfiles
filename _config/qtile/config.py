@@ -46,9 +46,9 @@ keys = [
 
 groups = [
     Group('1', matches=[Match(wm_class=['Iceweasel'])]),
-    Group('2', matches=[Match(wm_class=['Skype'])]),
+    Group('2', matches=[Match(wm_class=['Skype'])], layout='tile'),
 ]
-groups.extend([Group(str(i)) for i in range(3,10)])
+groups.extend([Group(str(i)) for i in range(3,5)])
 
 for i in groups:
     keys.append(
@@ -63,6 +63,7 @@ layouts = [
     layout.Max(),
     layout.Stack(stacks=2),
     layout.Tile(ratio=0.75),
+    layout.Matrix(),
 ]
 
 widget_defaults = dict(
@@ -79,6 +80,7 @@ screens = [
             widget.WindowName(),
             widget.Systray(),
             widget.Battery(),
+            widget.BatteryIcon(),
             widget.CurrentLayout(),
             widget.Clock(format='%Y-%m-%d %H:%M'),
         ], 30),
