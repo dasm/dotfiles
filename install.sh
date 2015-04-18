@@ -25,16 +25,33 @@ function unlink_file {
     fi
 }
 
-if [ "$1" == "deploy" ]; then
-    for i in _*
-    do
-        link_file $i
+function link_dir {
+    source="${PWD}/$1"
+    target="${HOME}/${1/_/.}"
+
+    ln -sf ${source}/* ${target}
+}
+
+function deploy {
+    for i in _*; do
+        if [ -d "$i" ]; then
+            link_dir "$i"
+        else
+            link_file "$i"
+        fi
     done
+}
+
+function undeploy {
+    for i in _*; do
+        unlink_file "$i"
+    done
+}
+
+if [ "$1" == "deploy" ]; then
+    deploy
 fi
 
 if [ "$1" == "undeploy" ]; then
-    for i in _*
-    do
-        unlink_file $i
-    done
+    undeploy
 fi

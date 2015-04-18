@@ -21,7 +21,7 @@ keys = [
     # Toggle between split and unsplit sides of stack.
     # Split = all windows displayed
     # Unsplit = 1 window displayed, like Max layout, but still with multiple stack panes
-    Key([mod, 'shift'], 'Return', lazy.layout.toggle_split()), 
+    Key([mod, 'shift'], 'Return', lazy.layout.toggle_split()),
 
     Key([mod], 'Return', lazy.spawn('konsole')),
 
@@ -31,13 +31,13 @@ keys = [
     Key([mod], 'Tab', lazy.nextlayout()),  # Toggle between different layouts as defined below
 
     Key([mod], 'w', lazy.window.kill()),
-    
+
     Key([mod, 'control'], 'r', lazy.restart()),
     Key([mod, 'control'], 'q', lazy.shutdown()),
     Key([mod], 'r', lazy.spawncmd()),
 
     Key([mod], 'l', lazy.spawn('xscreensaver-command -l')),
-    
+
     Key([mod], 'i', lazy.spawn('iceweasel')),
 
     Key([mod], "n", lazy.layout.normalize()),
@@ -107,4 +107,4 @@ auto_fullscreen = True
 @hook.subscribe.startup_once
 def autostart():
     home = os.path.expanduser('~')
-    subprocess.call([home + '.config/qtile/autostart.sh'])
+    subprocess.call([home + '/.config/qtile/autostart.sh'])
