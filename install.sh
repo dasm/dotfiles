@@ -32,6 +32,10 @@ function link_dir {
     ln -sf ${source}/* ${target}
 }
 
+function download_vim {
+    curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
+}
+
 function deploy {
     for i in _*; do
         if [ -d "$i" ]; then
@@ -50,6 +54,7 @@ function undeploy {
 
 if [ "$1" == "deploy" ]; then
     deploy
+    download_vim
 fi
 
 if [ "$1" == "undeploy" ]; then
