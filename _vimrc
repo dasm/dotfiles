@@ -4,10 +4,10 @@ if has('vim_starting')
     set nocompatible " Be iMproved
   endif
 
-  set runtimepath+=/home/dasm/.vim/bundle/neobundle.vim/ "Required
+  set runtimepath+=~/.vim/bundle/neobundle.vim/ "Required
 endif
 
-call neobundle#begin(expand('/home/dasm/.vim/bundle')) "Required
+call neobundle#begin(expand('~/.vim/bundle')) "Required
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim' "Required
