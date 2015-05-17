@@ -1,6 +1,6 @@
 #!/bin/sh
 
-feh --big-fill ~/.config/qtile/wallpaper.jpg
+feh --bg-fill ~/.config/qtile/wallpaper.jpg
 skype &
 iceweasel &
 dropbox start &
