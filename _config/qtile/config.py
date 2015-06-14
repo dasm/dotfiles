@@ -48,7 +48,7 @@ groups = [
     Group('1', matches=[Match(wm_class=['Iceweasel'])]),
     Group('2', matches=[Match(wm_class=['Skype'])], layout='tile'),
 ]
-groups.extend([Group(str(i)) for i in range(3,5)])
+groups.extend([Group(str(i)) for i in range(3,7)])
 
 for i in groups:
     keys.append(
