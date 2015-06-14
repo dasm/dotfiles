@@ -37,6 +37,7 @@ set shiftwidth=4
 set softtabstop=4
 
 set spell
+set wildmenu
 colorscheme desert
 
 " Whitespaces
@@ -62,5 +63,3 @@ if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
 
-" NERDTree new tab
-let NERDTreeMapOpenInTab='<ENTER>'
