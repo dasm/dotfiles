@@ -153,3 +153,7 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+# Startup
+exec skype
+exec dropbox start
