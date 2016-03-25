@@ -154,6 +154,19 @@ bar {
         status_command i3status
 }
 
+# Assign to workspace
+assign [class="Iceweasel"] 1
+assign [class="Firefox"] 1
+assign [class="Icedove"] 2
+assign [class="Thunderbird"] 2
+
+assign [class="Skype"] 3
+
+#
 # Startup
+exec firefox
+exec iceweasel
+exec thunderbird
+exec icedove
 exec skype
 exec dropbox start
