@@ -165,8 +165,6 @@ assign [class="Skype"] 3
 #
 # Startup
 exec firefox
-exec iceweasel
 exec thunderbird
-exec icedove
 exec skype
 exec dropbox start
