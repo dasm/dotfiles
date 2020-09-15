@@ -1,3 +1,5 @@
+[core]
+    editor = vim
 [user]
     name = Dariusz Smigiel
     email =  1412617+dasm@users.noreply.github.com
